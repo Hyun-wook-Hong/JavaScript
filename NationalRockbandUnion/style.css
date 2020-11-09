@@ -1,0 +1,167 @@
+/*****************************************************
+*  title: style.css                                  *
+*  date: November 9th, 2020                          *
+*  author: Jeremy Hong                               * 
+*  description: Stylesheet of this web application   *
+*                                                    * 
+******************************************************/
+
+/* root */
+:root {
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-skyblue: #00fcfc;
+    --color-dark-skyblue: #007a99;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161;
+    --color-light-grey: #7c7979;
+    --color-blue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+    --size-border-radius: 4px;
+    --annimation-duration: 300ms;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* tag ids */
+#navbar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+        padding-top: 8px;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+    background-color: transparent;
+    transition: all var(--animation-duration)
+        ease-in-out;
+    z-index: 1;
+}
+
+#home{
+    padding: 40px;
+        padding-top: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+    text-align: center;
+    background-color: white;
+}
+
+
+/* classes */
+
+/* navbar */
+.navbar__logo{
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu{
+    display: flex;
+}
+
+.navbar__menu_item{
+    cursor: pointer;
+    padding: 8px 12px;
+        padding-top: 8px;
+        padding-right: 1px;
+        padding-bottom: 8px;
+        padding-left: 12px;
+    margin: 0 4px;
+        margin-top: 0px;
+        margin-right: 4px;
+        margin-bottom: 0px;
+        margin-left: 4px;
+    
+}
+
+.navbar_toggle-btn{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    font-size: 24px;
+    color: var(--color--white);
+    display: none;
+}
+
+.navbar__member{
+    float: right;
+}
+
+.navbar__member_item{
+    cursor: pointer;
+        
+}
+
+.hr__line{
+    border-color: black;
+    width: 100%;
+}
+
+/* tag styles */
+
+ul{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li{
+    display: list-item;
+    list-style: none;
+    text-align: -webkit-match-parent;
+}
+
+body{
+    margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+}
+
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+        border-top-color: initial;
+        border-top-style: none;
+        border-top-width: initial;
+        border-right-color: initial;
+        border-right-style: none;
+        border-right-width: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: initial;
+        border-left-color: initial;
+        border-left-style: none;
+        border-left-width: initial;
+        border-image-source: initial;
+        border-image-slice: initial;
+        border-image-width: initial;
+        border-image-outset: initial;
+        border-image-repeat: initial;
+    outline: none;
+        outline-color: initial;
+        outline-style: none;
+        outline-width: initial;
+}
