@@ -23,7 +23,7 @@ document.addEventListener('scroll', ()=>{
   console.log(`navbarHeight: ${navbarHeight}`);
 
   //현재 navbar 태그 높이보다 스크롤한 높이 값이 더 낮으면 헤더 페이드인
-  if(window.scrollY < navbarHeight){
+  if(window.scrollY > navbarHeight){
     navbar.classList.add('navbar-fadein');
   }
   else{
@@ -31,4 +31,15 @@ document.addEventListener('scroll', ()=>{
   }
 })
 
-// navbar tag 토글버튼 이벤트 (마우스 갖다대면 색깔 변하게)
+// navbar menu 누르면 이동
+/*
+const navbarMenu = document.querySelector(".navbar__menu");
+navbarMenu.addEventListener('click', (event)=>{
+    const target = event.target;
+    const link = target.dataset.target;
+    if(link===null){
+        return;
+    }
+    navbarMenu.classList.remove('open');
+    scrollIntoView(link);
+})*/

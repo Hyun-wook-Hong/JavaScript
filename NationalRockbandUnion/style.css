@@ -48,7 +48,11 @@
         padding-right: 8px;
         padding-bottom: 8px;
         padding-left: 8px;
-    background-color: white;
+    background-color: transparent;
+    border-bottom: 1px solid #d6d6d6;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(214, 214, 214);
     transition: all var(--animation-duration)
         ease-in-out;
     z-index: 1;
@@ -56,17 +60,19 @@
 
 /* if scroll down, navbar will color by browser */
 #navbar.navbar-fadein{
-    background-color: white(93, 150, 255);
+    background-color: white;
     padding: 8px;
         padding-top: 8px;
         padding-right: 8px;
         padding-bottom: 8px;
         padding-left: 8px;
 
+    /*fade in animation*/
+    /*
     animation: fadein 2s;
     -moz-animation: fadein 2s;    /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari & Chrome */
-    -o-animation: fadein 2s;      /* Opera */
+    /*-webkit-animation: fadein 2s; /* Safari & Chrome */
+    /*-o-animation: fadein 2s;      /* Opera */
 }
 
 #home{
@@ -79,11 +85,51 @@
     background-color: white;
 }
 
+#footer{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*section styles*/
+#home{
+    padding: 40px;
+        padding-top: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+    text-align: center;
+}
 
 /* classes */
 
+/* div */
+.ovr__header{
+    display: flex;
+}
+
+.ovr__contents{
+    position: relative;
+    text-align: center;
+}
+
+/*for slide shows*/
+.mySlides{
+    display: none;
+}
+
+.slideshow-container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
 /* navbar */
 .navbar__logo{
+    cursor: pointer;
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
 }
@@ -125,8 +171,13 @@
         
 }
 
-.hr__line{
-    border-color: black;
+.hr__hd_line{
+    border-color: white;
+    width: 100%;
+}
+
+.hr__ft_line{
+    border-color: white;
     width: 100%;
 }
 
@@ -155,11 +206,65 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-/* Add a background to navbar links on hover(hang over things) */
-.navber a:hover, .dropdown:hover, .dropbtn{
-    background-color: maroon;
+.footer__contents{
+    background-color: gray;
 }
 
+/*Prev, Next button in slide show*/
+.prev, .next {
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+
+/* Position "next button" to the right */
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* caption, number text */
+.caption__text{
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 36px;
+    width: 100%;
+    text-align: center;
+}
+
+.number__text{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* dot in below of slideshow */
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s case;
+}
+
+.active, .dot:hover{
+    background-color: #717171;
+}
 
 /* tag styles */
 
@@ -177,12 +282,41 @@ li{
     text-align: -webkit-match-parent;
 }
 
+img{
+    vertical-align: middle;
+}
+
+footer{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*마우스 오버, 마우스 올렸을 때*/
+li:hover{
+    color: orange;
+    text-decoration: underline;
+}
+/* 슬라이드쇼 prev, next 마우스오버 효과 */
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+li:active{
+    color: orange;
+}
+
+a:hover{
+    color: red;
+}
+
 body{
     margin: 0;
         margin-top: 0px;
         margin-right: 0px;
         margin-bottom: 0px;
         margin-left: 0px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: default;
 }
 
 button{
@@ -210,6 +344,19 @@ button{
         outline-color: initial;
         outline-style: none;
         outline-width: initial;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 
 /* keyframes */
@@ -245,3 +392,36 @@ button{
         opacity:1;
     }
 }
+
+/* media screen for mobile environments, just write minimal datas,
+보통 780px임 */
+@media screen and (max-width: 780px){
+    :root{
+        /* font size */
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    }
+
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        background-color: white;
+    }
+
+    .navbar__menu{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
