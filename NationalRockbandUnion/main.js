@@ -22,24 +22,32 @@ document.addEventListener('scroll', ()=>{
   // navbar 태그 높이
   console.log(`navbarHeight: ${navbarHeight}`);
 
-  //현재 navbar 태그 높이보다 스크롤한 높이 값이 더 낮으면 헤더 페이드인
+  //현재 navbar 태그 높이보다 스크롤한 높이 값이 더 낮으면
   if(window.scrollY > navbarHeight){
-    navbar.classList.add('navbar-fadein');
+    navbar.classList.add('navbar-after');
   }
   else{
-    navbar.classList.remove('navbar-fadein');
+    navbar.classList.remove('navbar-after');
   }
 })
 
-// navbar menu 누르면 이동
-/*
-const navbarMenu = document.querySelector(".navbar__menu");
-navbarMenu.addEventListener('click', (event)=>{
-    const target = event.target;
-    const link = target.dataset.target;
-    if(link===null){
-        return;
-    }
-    navbarMenu.classList.remove('open');
-    scrollIntoView(link);
-})*/
+// navbar menu 클릭하면 각 section으로 이동
+const tagMenu = document.querySelector(".navbar__menu");
+tagMenu.addEventListener('click', (event)=>{
+  //console.log("클릭 이벤트 테스트!");
+  const destination = event.target;
+  const link = destination.dataset.link;
+  if(link === null){
+    return;
+  }
+
+  tagMenu.classList.remove('open');
+  scrollIntoView(link);
+})
+
+
+/* scrollIntoView function */
+function scrollIntoView(selector){
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior:"smooth" });
+}

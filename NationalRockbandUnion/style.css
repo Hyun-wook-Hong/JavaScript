@@ -59,7 +59,7 @@
 }
 
 /* if scroll down, navbar will color by browser */
-#navbar.navbar-fadein{
+#navbar.navbar-after{
     background-color: white;
     padding: 8px;
         padding-top: 8px;
@@ -115,6 +115,13 @@
     text-align: center;
 }
 
+.fadein__img{
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;    /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari & Chrome */
+    -o-animation: fadein 2s;      /* Opera */
+}
+
 /*for slide shows*/
 .mySlides{
     display: none;
@@ -124,6 +131,16 @@
     max-width: 1000px;
     position: relative;
     margin: auto;
+}
+
+.skill__inventory{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+        margin-top: 80px;
+        margin-right: 0px;
+        margin-bottom: 80px;
+        margin-left: 0px;
 }
 
 
@@ -136,6 +153,10 @@
 
 .navbar__menu{
     display: flex;
+}
+
+.navbar__menu.open{
+    display: block;
 }
 
 .navbar__menu_item{
@@ -264,6 +285,17 @@
 
 .active, .dot:hover{
     background-color: #717171;
+}
+
+/* Section tag */
+.section{
+    padding: 16px;
+    padding-top: 50px;
+}
+
+::selection{
+    background: orange;
+    color: white;
 }
 
 /* tag styles */
