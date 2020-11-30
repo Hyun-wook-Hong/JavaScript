@@ -185,6 +185,10 @@
     color: black;
 }
 
+.logo__icon{
+    color: black;
+}
+
 /* navbar */
 .navbar__logo{
     cursor: pointer;
