@@ -46,6 +46,31 @@ tagMenu.addEventListener('click', (event)=>{
 })
 
 
+/* Home 내려가면 불투명 */
+const home = document.querySelector(".ovr__header");
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll', ()=>{
+  home.style.opacity = 1 - (window.scrollY / homeHeight);
+});
+
+/* Arrow up button visible event */
+const arrow = document.querySelector(".arrow__to__top");
+
+document.addEventListener('scroll', ()=>{
+  if(window.scrollY > (homeHeight/2) ){
+    arrow.classList.add('visible');
+  }else{
+    arrow.classList.remove('visible');
+  }
+});
+
+/* Button click listener */
+arrow.addEventListener('click', ()=>{
+  scrollIntoView("#home");
+});
+
+
 /* scrollIntoView function */
 function scrollIntoView(selector){
   const scrollTo = document.querySelector(selector);

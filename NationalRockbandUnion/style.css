@@ -99,6 +99,14 @@
 
 /* classes */
 
+.ovr__pic{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid white;
+
+}
+
 /* div */
 .ovr__header{
     display: flex;
@@ -165,6 +173,16 @@
 
 .skill__contents{
     font-size: var(--font-small);
+}
+
+.sns__links{
+    font-size: var(--font-large);
+    margin: 24px 0;
+    color: skyblue;
+}
+
+.sns__icon{
+    color: black;
 }
 
 /* navbar */
@@ -310,6 +328,28 @@
     background-color: #717171;
 }
 
+/* Arrow to up */
+.arrow__to__top{
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    background-color: skyblue;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
+}
+
+.arrow__to__top.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* Section tag */
 .section{
     text-align: center;
@@ -326,8 +366,13 @@
     margin: auto;
 }
 
+.section__container__sns{
+    max-width:300px;
+    margin: auto;
+}
+
 ::selection{
-    background: orange;
+    background: skyblue;
     color: white;
 }
 
@@ -359,7 +404,7 @@ footer{
 
 /*마우스 오버, 마우스 올렸을 때*/
 li:hover{
-    color: orange;
+    color: skyblue;
     text-decoration: underline;
 }
 /* 슬라이드쇼 prev, next 마우스오버 효과 */
@@ -368,11 +413,18 @@ li:hover{
 }
 
 li:active{
-    color: orange;
+    color: skyblue;
 }
 
 a:hover{
-    color: red;
+    color: skyblue;
+}
+
+a:visited{
+    text-decoration: none;
+}
+a:focus{
+    text-decoration: none;
 }
 
 body{
