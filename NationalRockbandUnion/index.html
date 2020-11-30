@@ -11,6 +11,7 @@
     <!-- Load CSS -->
     <!-- Original -->
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/69c2760fe7.js" crossorigin="anonymous"></script>
     <script src="main.js" defer></script> 
 </head>
 <body>
@@ -72,9 +73,6 @@
         <br>
         <br>
         <br>
-        <h3> ABOUT ME </h3>
-
-
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <div class="number__text"> 1 / 3 </div>
@@ -103,19 +101,38 @@
 
     </section>   
          <!-- section: home -->
-         <section id="skills">
-             <br>
-             <br>
-             <br>
-             <h3> SKILL SET </h3>
-
+         <section id="skills" class="section section__container">
+             <!-- Several programming languages -->
              <div class="skill__inventory">
-                <a>테스트1</a>
-                <a>테스트2</a>
-                <a>테스트3</a>
-                <a>테스트4</a>
-                <a>테스트5</a>
-                <a>테스트6</a>
+                 <div class="skill">
+                    <div class="skill__icon content " onmouseover="handleMouseOver(this, 'bounce')">
+                        <i class="far fa-keyboard"></i>
+                    </div>
+                    <div class="skill__title">
+                        <h2>Program Languages</h2>
+                    </div>
+                    <div class="skill__contents">Java, C++, C#, Python, Shell for Linux</div>
+                </div>
+            <!-- Front-end dev skills -->
+            <div class="skill">
+                <div class="skill__icon content " onmouseover="handleMouseOver(this, 'bounce')">
+                       <i class="fab fa-js"></i>
+                   </div>
+                   <div class="skill__title">
+                       <h2>Front-end Dev</h2>
+                   </div>
+                   <div class="skill__contents">HTML, CSS, JS</div>
+               </div>                  
+            <!-- Query for RDBMS -->
+            <div class="skill">
+                 <div class="skill__icon content " onmouseover="handleMouseOver(this, 'bounce')">
+                        <i class="fas fa-database" area-hidden="true"></i>
+                    </div>
+                    <div class="skill__title">
+                        <h2>RDBMS</h2>
+                    </div>
+                    <div class="skill__contents">Oracle, MySQL</div>
+                </div>                
             </div>
 
 
@@ -172,32 +189,20 @@
         asdadasd <br/>         
 
     </section>   
-         <!-- section: home -->
-         <section id="contact">
-         A <br/>
-         a <br/>
-         bsda <br/>
-         asdadasd <br/>
-         dadsada <br/>
-         dasdadsa <br/>
-         dasdsad <br/>
-         asdadasd <br/>         A <br/>
-         a <br/>
-         bsda <br/>
-         asdadasd <br/>
-         dadsada <br/>
-         dasdadsa <br/>
-         dasdsad <br/>
-         asdadasd <br/>
-        </section>   
     </div>
     <script src="slideshow.js" defer></script> 
 </body>
 
 <!-- footer -->
 <footer>
+             <!-- section: home -->
+    <section id="contact">
     <hr class="hr__ft_line"></hr>
-    <p id="a__copyright"> Copyright ⓒ Jeremy Hong, 2020 All right reserved </p>
+        <p id="a__email"> hhw5321@gmail.com </p>
+        <div class="sns_links">
+        </div>
+        <p id="a__copyright"> Copyright ⓒ Jeremy Hong, 2020 All right reserved </p>
+    </section>   
 </footer>
 
 </html>

@@ -51,3 +51,13 @@ function scrollIntoView(selector){
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior:"smooth" });
 }
+
+/* Bounce animation function */
+function handleMouseOver(element, key){
+  console.log(element, key);
+  element.className = "content " + key;
+  element.addEventListener("animationend", () => {
+    element.className = "content";
+  })
+
+}
