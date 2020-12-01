@@ -48,7 +48,7 @@
         padding-right: 8px;
         padding-bottom: 8px;
         padding-left: 8px;
-    background-color: transparent;
+    background-color: white;
     border-bottom: 1px solid #d6d6d6;
         border-bottom-width: 1px;
         border-bottom-style: solid;
@@ -97,7 +97,85 @@
     text-align: center;
 }
 
+#myVision{
+    position: relative;
+    width: 1160px;
+    margin: 0 auto;
+    padding-bottom: 180px;
+}
+
+#ul__Vision{
+    display: block;
+    margin-block-start:  1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#card{
+    /*position: flex;*/
+    display: flex;
+    background: #FFF;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 0;
+    height: 680px;
+
+}
+
+#a__copyright{
+    font-size: 8;
+}
+
 /* classes */
+.painting__grey{
+    background-color: rgb(243, 241, 241);
+}
+
+
+.card__list{
+    position: relative;
+    background: #FFF;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 11;
+    height: 680px;
+
+}
+
+.card__contents{
+    padding-top: 52px;
+    padding-right: 60px;
+    padding-bottom: 58px;
+    padding-left: 60px;
+    box-sizing: border-box;
+    font-weight: 700;
+    background: white;
+    word-break: keep-all;
+    height: 100%;
+    position: relative;
+}
+
+.card__contents__detail{
+    font-size: var(--font-small);
+}
+
+.card__contents__hashtag{
+    margin-top: 70px;
+    font-size: var(--font-small);
+    color: rgb(121, 152, 165);
+}
+
+.card__visual{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    height: 100%;
+    object-fit: cover;
+}
 
 .ovr__pic{
     width: 250px;
@@ -115,6 +193,11 @@
 .ovr__contents{
     position: relative;
     text-align: center;
+}
+
+.ovr__preface{
+    padding-left: 30px;
+    padding-top: 50px;
 }
 
 .fadein__img{
@@ -394,6 +477,12 @@ li{
     display: list-item;
     list-style: none;
     text-align: -webkit-match-parent;
+}
+
+p{
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: -1.5px;
 }
 
 img{
