@@ -1,0 +1,669 @@
+/*****************************************************
+*  title: style.css                                  *
+*  date: November 9th, 2020                          *
+*  author: Jeremy Hong                               * 
+*  description: Stylesheet of this web application   *
+*                                                    * 
+******************************************************/
+
+/* root */
+:root {
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-skyblue: #00fcfc;
+    --color-dark-skyblue: #007a99;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161;
+    --color-light-grey: #7c7979;
+    --color-blue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+    --size-border-radius: 4px;
+    --annimation-duration: 300ms;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* tag ids */
+#navbar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+        padding-top: 8px;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+    background-color: white;
+    border-bottom: 1px solid #d6d6d6;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(214, 214, 214);
+    transition: all var(--animation-duration)
+        ease-in-out;
+    z-index: 1;
+    box-shadow: 1px 1px 1px 1px rgb(240, 239, 239);
+}
+
+/* if scroll down, navbar will color by browser */
+#navbar.navbar-after{
+    background-color: white;
+    padding: 8px;
+        padding-top: 8px;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+}
+
+#home{
+    padding: 40px;
+        padding-top: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+    text-align: center;
+    background-color: white;
+}
+
+#footer{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*section styles*/
+#home{
+    padding: 40px;
+        padding-top: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+    text-align: center;
+}
+
+#myVision{
+    position: relative;
+    width: 1160px;
+    margin: 0 auto;
+    padding-bottom: 180px;
+}
+
+#ul__Vision{
+    display: block;
+    margin-block-start:  1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#card{
+    /*position: flex;*/
+    display: flex;
+    background: #FFF;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 0;
+    height: 680px;
+
+}
+
+#a__copyright{
+    font-size: 8;
+}
+
+/* classes */
+.painting__grey{
+    background-color: rgb(243, 241, 241);
+}
+
+
+.card__list{
+    position: relative;
+    background: #FFF;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 11;
+    height: 680px;
+
+}
+
+.card__contents{
+    padding-top: 52px;
+    padding-right: 60px;
+    padding-bottom: 58px;
+    padding-left: 60px;
+    box-sizing: border-box;
+    font-weight: 700;
+    background: white;
+    word-break: keep-all;
+    height: 100%;
+    position: relative;
+}
+
+.card__contents__detail{
+    font-size: var(--font-small);
+}
+
+.card__contents__hashtag{
+    margin-top: 70px;
+    font-size: var(--font-small);
+    color: rgb(121, 152, 165);
+}
+
+.card__visual{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ovr__pic{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid white;
+
+}
+
+/* div */
+.ovr__header{
+    display: flex;
+}
+
+.ovr__contents{
+    position: relative;
+    text-align: center;
+}
+
+.ovr__preface{
+    padding-left: 30px;
+    padding-top: 50px;
+}
+
+.fadein__img{
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;    /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari & Chrome */
+    -o-animation: fadein 2s;      /* Opera */
+}
+
+/*for slide shows*/
+.mySlides{
+    display: none;
+}
+
+.slideshow-container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.skill__inventory{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+        margin-top: 80px;
+        margin-right: 0px;
+        margin-bottom: 80px;
+        margin-left: 0px;
+}
+
+.skill{
+    text-align: center;
+}
+
+.skill__icon, .content{
+    width: 160px;
+    height: 160px;
+    font-size: 70px;
+    line-height: 170px;
+    margin: auto;
+    border: 2px solid var(--color-dark-skyblue);
+    /* 굴곡을 50%로 주면 원형이됨 */
+    border-radius: 50%;
+    margin-bottom: 16px;
+    color: var(--color-dark-skyblue);
+
+}
+
+.skill__icon:hover, .content:hover{
+    color: navy;
+}
+
+.skill__title, .skill__contents{
+    color: var(--color-dark-grey);
+}
+
+.skill__contents{
+    font-size: var(--font-small);
+}
+
+.sns__links{
+    font-size: var(--font-large);
+    margin: 24px 0;
+    color: skyblue;
+}
+
+.sns__icon{
+    color: black;
+}
+
+.logo__icon{
+    color: black;
+}
+
+/* navbar */
+.navbar__logo{
+    cursor: pointer;
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu{
+    display: flex;
+}
+
+.navbar__menu.open{
+    display: block;
+}
+
+.navbar__menu_item{
+    cursor: pointer;
+    padding: 8px 12px;
+        padding-top: 8px;
+        padding-right: 1px;
+        padding-bottom: 8px;
+        padding-left: 12px;
+    margin: 0 4px;
+        margin-top: 0px;
+        margin-right: 4px;
+        margin-bottom: 0px;
+        margin-left: 4px;
+    
+}
+
+.navbar_toggle-btn{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    font-size: 24px;
+    color: var(--color--white);
+    display: none;
+}
+
+.navbar__member{
+    float: right;
+}
+
+.navbar__member_item{
+    cursor: pointer;
+        
+}
+
+.hr__hd_line{
+    border-color: white;
+    width: 100%;
+}
+
+.hr__ft_line{
+    border-color: white;
+    width: 100%;
+}
+
+/* dropdown */
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.footer__contents{
+    background-color: gray;
+}
+
+/*Prev, Next button in slide show*/
+.prev, .next {
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+
+/* Position "next button" to the right */
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* caption, number text */
+.caption__text{
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 36px;
+    width: 100%;
+    text-align: center;
+}
+
+.number__text{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* dot in below of slideshow */
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s case;
+}
+
+.active, .dot:hover{
+    background-color: #717171;
+}
+
+/* Arrow to up */
+.arrow__to__top{
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    background-color: skyblue;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
+}
+
+.arrow__to__top.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Section tag */
+.section{
+    text-align: center;
+    padding: 70px;
+        padding-top:70px;
+        padding-right: 70px;
+        padding-bottom: 70px;
+        padding-left: 70px;
+    margin: auto;
+}
+
+.section__container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section__container__sns{
+    max-width:300px;
+    margin: auto;
+}
+
+::selection{
+    background: skyblue;
+    color: white;
+}
+
+/* tag styles */
+
+ul{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li{
+    display: list-item;
+    list-style: none;
+    text-align: -webkit-match-parent;
+}
+
+p{
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: -1.5px;
+}
+
+img{
+    vertical-align: middle;
+}
+
+footer{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(235, 233, 233);
+}
+
+/*마우스 오버, 마우스 올렸을 때*/
+li:hover{
+    color: skyblue;
+    text-decoration: underline;
+}
+/* 슬라이드쇼 prev, next 마우스오버 효과 */
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+li:active{
+    color: skyblue;
+}
+
+a:hover{
+    color: skyblue;
+}
+
+a:visited{
+    text-decoration: none;
+}
+a:focus{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: default;
+}
+
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+        border-top-color: initial;
+        border-top-style: none;
+        border-top-width: initial;
+        border-right-color: initial;
+        border-right-style: none;
+        border-right-width: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: initial;
+        border-left-color: initial;
+        border-left-style: none;
+        border-left-width: initial;
+        border-image-source: initial;
+        border-image-slice: initial;
+        border-image-width: initial;
+        border-image-outset: initial;
+        border-image-repeat: initial;
+    outline: none;
+        outline-color: initial;
+        outline-style: none;
+        outline-width: initial;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+/* bounce animation */
+.bounce{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-name: bounce;
+    transform-origin: center bottom;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* keyframes */
+@keyframes fadein{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes bounce{
+    0%, 100%, 20%, 53%, 80%{
+        transition-timing-function: cubic-bezier(0.215, .610, 0.355, 1);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43%{
+        transition-timing-function: cubic-bezier(0.755, .050, .055, .060);
+        transform: translate3d(0, -30px, 0);
+    }
+    70%{
+        transition-timing-function: cubic-bezier(0.755, .050, .855, .060);
+        transform: translate3d(0, -15px, 0);
+    }
+    90%{
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+
+@-moz-keyframes fadein{     /* Firefox */
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein{  /*Safari and Chrome*/
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@-o-keyframes fadein{       /* Opera */
+    from{
+        opacity:0;       
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* media screen for mobile environments, just write minimal datas,
+보통 780px임 */
+@media screen and (max-width: 780px){
+    :root{
+        /* font size */
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    }
+
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        background-color: white;
+    }
+
+    .navbar__menu{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
